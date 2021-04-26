@@ -15,3 +15,5 @@ class UserFactory(factory.alchemy.SQLAlchemyModelFactory):
         model = UserModel
 
     nickname = factory.Sequence(lambda n: "test_user_{}".format(n))
+    status = "default"
+    sex = "M"
