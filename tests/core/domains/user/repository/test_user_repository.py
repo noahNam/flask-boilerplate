@@ -20,3 +20,10 @@ def test_get_user(session):
     user_entity = UserRepository().get_user(user_id=user.id)
 
     assert user_entity == user.to_entity()
+
+
+def test_create_user_when_use_factory_boy(session, create_users):
+    users = session.query(UserModel).all()
+
+    assert len(users) == 2
+    assert users[0].nickname == "test_user_0"
