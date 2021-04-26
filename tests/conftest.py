@@ -1,14 +1,12 @@
 import os
 
-import pytest
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy.orm import scoped_session
-from .seeder.conftest import *
 from pytest_factoryboy import register
-
+from sqlalchemy.orm import scoped_session
 from app import create_app
 from app.extensions.database import db as _db
+from .seeder.conftest import *
 
 
 @pytest.fixture(scope="session")
@@ -67,6 +65,8 @@ def session(db: SQLAlchemy) -> scoped_session:
     session = db.create_scoped_session(options=options)
 
     db.session = session
+
+    set_factories_session(session)
 
     yield db.session
 
