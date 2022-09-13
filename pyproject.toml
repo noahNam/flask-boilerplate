@@ -2,7 +2,7 @@
 name = "widow"
 version = "0.1.0"
 description = ""
-authors = ["noah <noah@apartalk.com>"]
+authors = ["noah <noah85.Nam@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"

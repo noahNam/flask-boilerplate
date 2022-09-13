@@ -1,4 +1,4 @@
-# What is [widow](https://bitbucket.org/apartalk/widow/src)?
+# What is Flask-Boilerplate
 * starting point of projects
 * schema project
 * domain driven design
